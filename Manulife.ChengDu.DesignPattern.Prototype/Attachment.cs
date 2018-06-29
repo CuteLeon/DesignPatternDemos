@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manulife.ChengDu.DesignPattern.Prototype
+namespace Manulife.ChengDu.DesignPattern
 {
     [Serializable]
     public class Attachment
@@ -15,5 +15,11 @@ namespace Manulife.ChengDu.DesignPattern.Prototype
         {
             Console.WriteLine("下载附件，文件名为：{0}", this.Name);
         }
+
+        public new object MemberwiseClone()
+        {
+            return base.MemberwiseClone();
+        }
+
     }
 }

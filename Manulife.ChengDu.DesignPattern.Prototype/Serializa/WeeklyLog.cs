@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manulife.ChengDu.DesignPattern.Prototype
+namespace Manulife.ChengDu.DesignPattern.Prototype.Serializa
 {
     /// <summary>
     /// 工作周报：具体原型类
@@ -20,7 +20,6 @@ namespace Manulife.ChengDu.DesignPattern.Prototype
         public string Content { get; set; }
         public IList<Attachment> attachmentList { get; set; }
 
-        // v2,v3
         public WeeklyLog()
         {
             this.attachmentList = new List<Attachment>();
@@ -28,15 +27,6 @@ namespace Manulife.ChengDu.DesignPattern.Prototype
 
         public object Clone()
         {
-            // v1
-            //WeeklyLog obj = new WeeklyLog();
-            //obj.Name = this.Name;
-            //obj.Date = this.Date;
-            //obj.Content = this.Content;
-            // v2 -- shallow copy
-            //obj.attachmentList = this.attachmentList;
-            //return obj;
-            // v3 -- deep copy
             BinaryFormatter bf = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
             bf.Serialize(ms, this);
