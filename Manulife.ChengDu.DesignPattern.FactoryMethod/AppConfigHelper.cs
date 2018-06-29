@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manulife.ChengDu.DesignPattern.Builder
+namespace Manulife.ChengDu.DesignPattern.FactoryMethod
 {
     public class AppConfigHelper
     {
