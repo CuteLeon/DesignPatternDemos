@@ -10,29 +10,35 @@ namespace Manulife.ChengDu.DesignPattern.Singleton
     {
         public static void Main(string[] args)
         {
-            LoadBalancer balancer, balancer2, balancer3;
-            balancer = LoadBalancer.GetLoadBalancer();
-            balancer2 = LoadBalancer.GetLoadBalancer();
-            balancer3 = LoadBalancer.GetLoadBalancer();
+            Console.Write("\n懒汉不安全：创建实例 ");
+            if (LazyUnsafe.GetInstance == LazyUnsafe.GetInstance)
+                Console.WriteLine("相同");
+            else
+                Console.WriteLine("不相同");
 
-            // 判断负载均衡器是否相同
-            if (balancer == balancer2 && balancer == balancer3 && balancer2 == balancer3)
-            {
-                Console.WriteLine("^_^ : 服务器负载均衡器是唯一的！");
-            }
+            Console.Write("\n懒汉安全：创建实例 ");
+            if (LazySafe.GetInstance == LazySafe.GetInstance)
+                Console.WriteLine("相同");
+            else
+                Console.WriteLine("不相同");
 
-            // 增加服务器
-            balancer.AddServer(new CustomServer() { Name = "Server 1" });
-            balancer.AddServer(new CustomServer() { Name = "Server 2" });
-            balancer.AddServer(new CustomServer() { Name = "Server 3" });
-            balancer.AddServer(new CustomServer() { Name = "Server 4" });
+            Console.Write("\n饿汉只读：创建实例 ");
+            if (HungryReadonly.GetInstance == HungryReadonly.GetInstance)
+                Console.WriteLine("相同");
+            else
+                Console.WriteLine("不相同");
 
-            // 模拟客户端请求的分发
-            for (int i = 0; i < 10; i++)
-            {
-                CustomServer server = balancer.GetServer();
-                Console.WriteLine("该请求已分配至 : " + server.Name);
-            }
+            Console.Write("\nLazy：创建实例 ");
+            if (LazyModel.GetInstance == LazyModel.GetInstance)
+                Console.WriteLine("相同");
+            else
+                Console.WriteLine("不相同");
+
+            Console.Write("\nLazy泛型：创建实例 ");
+            if (LazyChild.GetInstance == LazyChild.GetInstance)
+                Console.WriteLine("相同");
+            else
+                Console.WriteLine("不相同");
 
             Console.ReadKey();
         }

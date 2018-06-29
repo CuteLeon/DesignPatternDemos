@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Manulife.ChengDu.DesignPattern.Singleton
 {
-    /// <summary>
-    /// 假设自己是一台服务器
-    /// </summary>
-    public class CustomServer
+    public sealed class LazyChild : LazyBase<LazyChild>
     {
-        public string Name { get; set; }
-        public int Size { get; set; }
+        private LazyChild() { Console.WriteLine("创建" + this.GetType().ToString()); }
     }
 }

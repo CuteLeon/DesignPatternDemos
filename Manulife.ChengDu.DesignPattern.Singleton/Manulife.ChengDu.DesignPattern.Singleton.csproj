@@ -43,14 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomServer.cs" />
-    <Compile Include="LoadBalancer.cs" />
+    <Compile Include="Lazy\LazyModel.cs" />
+    <Compile Include="Lazy泛型\LazyBase.cs" />
+    <Compile Include="Lazy泛型\LazyChild.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="恶汉只读\HungryReadonly.cs" />
+    <Compile Include="懒汉不安全\LazyUnsafe.cs" />
+    <Compile Include="懒汉安全\LazySafe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
