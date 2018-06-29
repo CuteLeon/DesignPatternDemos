@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manulife.ChengDu.DesignPattern.FactoryMethod.v1
+namespace Manulife.ChengDu.DesignPattern.FactoryMethod.Interface
 {
     public interface ILogger
     {

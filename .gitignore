@@ -3,3 +3,20 @@
 ################################################################################
 
 /.vs
+/Manulife.ChengDu.DesignPattern.AbstractFactory/bin/Debug
+/Manulife.ChengDu.DesignPattern.AbstractFactory/obj/Debug
+
+/Manulife.ChengDu.DesignPattern.Builder/bin/Debug
+/Manulife.ChengDu.DesignPattern.Builder/obj/Debug
+
+/Manulife.ChengDu.DesignPattern.FactoryMethod/bin/Debug
+/Manulife.ChengDu.DesignPattern.FactoryMethod/obj/Debug
+
+/Manulife.ChengDu.DesignPattern.Prototype/bin/Debug
+/Manulife.ChengDu.DesignPattern.Prototype/obj/Debug
+
+/Manulife.ChengDu.DesignPattern.SimpleFactory/bin/Debug
+/Manulife.ChengDu.DesignPattern.SimpleFactory/obj/Debug
+
+/Manulife.ChengDu.DesignPattern.Singleton/bin/Debug
+/Manulife.ChengDu.DesignPattern.Singleton/obj/Debug

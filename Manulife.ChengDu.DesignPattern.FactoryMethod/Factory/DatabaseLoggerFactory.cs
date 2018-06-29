@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Manulife.ChengDu.DesignPattern.FactoryMethod.v1;
+using Manulife.ChengDu.DesignPattern.FactoryMethod.Interface;
+using Manulife.ChengDu.DesignPattern.FactoryMethod.Product;
 
-namespace Manulife.ChengDu.DesignPattern.FactoryMethod.v3
+namespace Manulife.ChengDu.DesignPattern.FactoryMethod.Factory
 {
-    public class DatabaseLoggerFactory : LoggerFactory
+    public class DatabaseLoggerFactory : ILoggerFactory
     {
-        public override ILogger CreateLogger()
+        public ILogger CreateLogger()
         {
             // 连接数据库，代码省略
             // 创建数据库日志记录器对象

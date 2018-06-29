@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Manulife.ChengDu.DesignPattern.FactoryMethod.Interface;
+using Manulife.ChengDu.DesignPattern.FactoryMethod.Product;
 
-namespace Manulife.ChengDu.DesignPattern.FactoryMethod.v1
+namespace Manulife.ChengDu.DesignPattern.FactoryMethod.Factory
 {
     public class FileLoggerFactory : ILoggerFactory
     {
