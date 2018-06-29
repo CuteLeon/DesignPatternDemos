@@ -1,10 +1,11 @@
-﻿using Manulife.ChengDu.DesignPattern.SimpleFactory.v1;
-using Manulife.ChengDu.DesignPattern.SimpleFactory.v2;
+﻿using Manulife.ChengDu.DesignPattern.SimpleFactory.Interface;
+using Manulife.ChengDu.DesignPattern.SimpleFactory.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Manulife.ChengDu.DesignPattern.SimpleFactory.Factory;
 
 namespace Manulife.ChengDu.DesignPattern.SimpleFactory
 {
@@ -12,45 +13,10 @@ namespace Manulife.ChengDu.DesignPattern.SimpleFactory
     {
         public static void Main(string[] args)
         {
-            // v1.0
-            //ClientV1();
-
-            //Console.WriteLine();
-
-            // v2.0
-            ClientV2();
-
+            IChartable chart = ChartFactory.GetChart("pie");
+            chart.Display();
             Console.ReadKey();
         }
 
-        public static void ClientV1()
-        {
-            IChartable chart = ChartFactory.GetChart("histogram");
-            if (chart != null)
-            {
-                chart.Display();
-            }
-
-            chart = ChartFactory.GetChart("pie");
-            if (chart != null)
-            {
-                chart.Display();
-            }
-        }
-
-        public static void ClientV2()
-        {
-            string type = AppConfigHelper.GetChartType();
-            if (string.IsNullOrEmpty(type))
-            {
-                return;
-            }
-
-            IChartable chart = ChartFactory.GetChart(type);
-            if (chart != null)
-            {
-                chart.Display();
-            }
-        }
     }
 }

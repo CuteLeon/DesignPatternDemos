@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Manulife.ChengDu.DesignPattern.SimpleFactory.Interface;
+using Manulife.ChengDu.DesignPattern.SimpleFactory.Product;
 
-namespace Manulife.ChengDu.DesignPattern.SimpleFactory.v1
+namespace Manulife.ChengDu.DesignPattern.SimpleFactory.Factory
 {
     public class ChartFactory
     {
